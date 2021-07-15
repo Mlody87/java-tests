@@ -145,11 +145,6 @@ public class SeleniumTest {
         WebElement pass = driver.findElement(By.xpath("//input[@name='password']"));
         pass.sendKeys("x");
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
-
         //WebElement button = driver.findElement(By.xpath("//span[contains(text(),'Zaloguj')]"));
         WebElement button = driver.findElement(By.name("button"));
         button.click();
@@ -173,37 +168,19 @@ public class SeleniumTest {
         WebElement dodaj = wait.until(ExpectedConditions.presenceOfElementLocated(xDodaj));
         dodaj.click();
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
-
         By xSzukaj = By.xpath("//div[@class='vs-con-input']//input[@type='text']");
         WebElement szukaj = wait.until(ExpectedConditions.presenceOfElementLocated(xSzukaj));
         szukaj.sendKeys("wortal");
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
 
         By xPozycjaListy = By.xpath("//a[@class='vs-dropdown--item-link'][contains(text(), 'wortal')]");
         WebElement pozycjaListy = wait.until(ExpectedConditions.presenceOfElementLocated(xPozycjaListy));
         pozycjaListy.click();
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
-
         By titleBy = By.name("title");
         WebElement titleElement = wait.until(ExpectedConditions.presenceOfElementLocated(titleBy));
         titleElement.sendKeys("Testowy wortal");
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
 
         WebElement saveElement = driver.findElement(By.id("saveButton"));
         saveElement.click();
@@ -219,38 +196,19 @@ public class SeleniumTest {
         WebElement dodaj = wait.until(ExpectedConditions.presenceOfElementLocated(xDodaj));
         dodaj.click();
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
-
-        //do poprawienia, musi znalezc tez w tym divie span=text Szukaj
+   
         By xSzukaj = By.xpath("//div[@class='vs-con-input']//input[@type='text']");
         WebElement szukaj = wait.until(ExpectedConditions.presenceOfElementLocated(xSzukaj));
         szukaj.sendKeys("directory_standard");
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
 
         By xPozycjaListy = By.xpath("//a[@class='vs-dropdown--item-link'][contains(text(), 'katalog')]");
         WebElement pozycjaListy = wait.until(ExpectedConditions.presenceOfElementLocated(xPozycjaListy));
         pozycjaListy.click();
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
-
         By titleBy = By.name("title");
         WebElement titleElement = wait.until(ExpectedConditions.presenceOfElementLocated(titleBy));
         titleElement.sendKeys("Testowy katalog");
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
 
         WebElement saveElement = driver.findElement(By.id("saveButton"));
         saveElement.click();
@@ -268,28 +226,13 @@ public class SeleniumTest {
         WebElement dodaj = wait.until(ExpectedConditions.presenceOfElementLocated(xDodaj));
         dodaj.click();
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
-
         By xSzukaj = By.xpath("//div[@class='vs-con-input']//input[@type='text']");
         WebElement szukaj = wait.until(ExpectedConditions.presenceOfElementLocated(xSzukaj));
         szukaj.sendKeys("informacja");
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
-
         By xPozycjaListy = By.xpath("//a[@class='vs-dropdown--item-link'][contains(text(), 'informacja')]");
         WebElement pozycjaListy = wait.until(ExpectedConditions.presenceOfElementLocated(xPozycjaListy));
         pozycjaListy.click();
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException ie) {
-        }
 
         NewsObject news = new NewsObject((ChromeDriver) driver);
 
@@ -316,11 +259,6 @@ public class SeleniumTest {
         WebElement opis = driver.findElement(By.xpath("//div[@name='mainPageDescription']//p"));
         js.executeScript("arguments[0].innerHTML ='Testowy opis';", opis);
 
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ie) {
-        }
 
         WebElement saveElement = driver.findElement(By.id("saveButton"));
         saveElement.click();
